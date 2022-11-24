@@ -1,0 +1,22 @@
+function isPrime ( n ) : boolean {
+     
+    if n <= 1 then : { return False ; }
+
+    for integer i = 2 to n then : { if n % i == 0 then : { return False ; } }
+ 
+    return True ;
+}
+
+function printPrime ( n ) : string {
+
+    for integer i = 2 to n + 1 then : {
+
+        if isPrime ( i ) then : { displayoutput ( i , " " ) ; }
+    }
+}
+
+program : {
+    var n : integer ;
+    getinput : n ;
+    printPrime ( n ) ;
+}
